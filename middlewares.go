@@ -1,6 +1,8 @@
 package main
 
-import ()
+import (
+	"net/http"
+)
 
 func AuthMiddleware(rw http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 
