@@ -1,12 +1,17 @@
 package main
 
 import (
+	"github.com/VojtechVitek/go-trello"
+	"github.com/groomly/api/trelloClient"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
 
 type User struct {
-	Auth0Id string `json:"auth_0_id"`
+	Auth0Id      string                     `json:"auth_0_id"`
+	TrelloToken  string                     `json:"trello_id"`
+	TrelloMember trello.Member              `json:"trello_member"`
+	TrelloBoards []trelloClient.TrelloBoard `json:"trello_boards"`
 }
 
 func (u *User) collection() string {
@@ -24,5 +29,5 @@ func (u *User) read(db *mgo.Database) {
 }
 
 func (u *User) update(db *mgo.Database) {
-	return
+	db.C(u.collection()).Insert(*u)
 }

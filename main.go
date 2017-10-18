@@ -24,7 +24,6 @@ func init() {
 		SigningMethod: jwt.SigningMethodHS256,
 		ErrorHandler: func(w http.ResponseWriter, r *http.Request, err string) {
 			log.Error("Authentication err: ", err)
-
 			http.Error(w, err, http.StatusUnauthorized)
 		},
 	})
@@ -35,6 +34,7 @@ func main() {
 	n := negroni.Classic()
 	n.UseHandler(router)
 	n.Use(negroni.HandlerFunc(JWTMiddleware.HandlerWithNext))
+	n.Use(negroni.HandlerFunc(DatabaseMiddleware))
 	n.Run(":8080")
 
 }

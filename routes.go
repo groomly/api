@@ -18,6 +18,12 @@ var routes = Routes{
 		"CreateUser",
 		"POST",
 		"/create-user",
-		CreateUser,
+		CreateUserHandler,
+	},
+	Route{
+		"link-trello",
+		"POST",
+		"/link-trello",
+		LinkTrelloHandler,
 	},
 }

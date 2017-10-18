@@ -13,3 +13,5 @@ import:
   subpackages:
   - jwt
 - package: github.com/auth0/go-jwt-middleware
+- package: github.com/VojtechVitek/go-trello
+  version: ^0.1.0

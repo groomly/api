@@ -1,5 +1,5 @@
-hash: 603ff77578ba2416c5e66f3b997006bba2b7891368db40cb5319bb55b3858b03
-updated: 2017-10-18T11:15:48.436736297-04:00
+hash: 979e9d7daf8155e1a1e5115865e0119478bbe7bb335eb5d30c15f2c2c549db90
+updated: 2017-10-18T13:13:53.953533183-04:00
 imports:
 - name: github.com/auth0-community/go-auth0
   version: 3de339a55934c49fa256181e63b9ecf0234c15b7
@@ -15,6 +15,8 @@ imports:
   version: f006c2ac4710855cf0f916dd6b77acf6b048dc6e
 - name: github.com/urfave/negroni
   version: fde5e16d32adc7ad637e9cd9ad21d4ebc6192535
+- name: github.com/VojtechVitek/go-trello
+  version: 4a7db23ac973c12e59e3c781b359005995bb3838
 - name: golang.org/x/crypto
   version: ed5229da99e3a6df35c756cd64b6982d19505d86
   subpackages:
