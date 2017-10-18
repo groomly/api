@@ -15,9 +15,9 @@ type Routes []Route
 
 var routes = Routes{
 	Route{
-		"CreateCard",
+		"CreateUser",
 		"POST",
-		"/create-card",
-		CreateCard,
+		"/create-user",
+		CreateUser,
 	},
 }

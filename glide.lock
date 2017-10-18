@@ -1,6 +1,12 @@
-hash: 36832d9ba5da5cb46a3751309d757dcdd65c04598ae2fe9d1fdf67b34565940a
-updated: 2017-10-17T15:56:51.803296528-04:00
+hash: 603ff77578ba2416c5e66f3b997006bba2b7891368db40cb5319bb55b3858b03
+updated: 2017-10-18T11:15:48.436736297-04:00
 imports:
+- name: github.com/auth0-community/go-auth0
+  version: 3de339a55934c49fa256181e63b9ecf0234c15b7
+- name: github.com/auth0/go-jwt-middleware
+  version: 5493cabe49f7bfa6e2ec444a09d334d90cd4e2bd
+- name: github.com/dgrijalva/jwt-go
+  version: a539ee1a749a2b895533f979515ac7e6e0f5b650
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/mux
@@ -10,7 +16,7 @@ imports:
 - name: github.com/urfave/negroni
   version: fde5e16d32adc7ad637e9cd9ad21d4ebc6192535
 - name: golang.org/x/crypto
-  version: 9419663f5a44be8b34ca85f08abc5fe1be11f8a3
+  version: ed5229da99e3a6df35c756cd64b6982d19505d86
   subpackages:
   - ssh/terminal
 - name: golang.org/x/sys
@@ -18,4 +24,15 @@ imports:
   subpackages:
   - unix
   - windows
+- name: gopkg.in/mgo.v2
+  version: 3f83fa5005286a7fe593b055f0d7771a7dce4655
+  subpackages:
+  - bson
+  - internal/json
+  - internal/sasl
+  - internal/scram
+- name: gopkg.in/square/go-jose.v2
+  version: f8f38de21b4dcd69d0413faf231983f5fd6634b1
+  subpackages:
+  - jwt
 testImports: []
