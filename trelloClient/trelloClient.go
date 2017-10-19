@@ -1,6 +1,7 @@
 package trelloClient
 
 import (
+	"fmt"
 	"github.com/VojtechVitek/go-trello"
 	"log"
 	"os"
@@ -32,7 +33,8 @@ func LinkTrello(token string) (trelloMember trello.Member, trelloBoards []Trello
 			trelloLists = append(trelloLists, TrelloList{List: list, Cards: trelloCards})
 		}
 		trelloBoards = append(trelloBoards, TrelloBoard{Board: board, Lists: trelloLists})
-
+		fmt.Println("done with board")
+		break
 	}
 
 	return trelloMember, trelloBoards

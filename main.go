@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/auth0/go-jwt-middleware"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/groomly/api/trelloClient"
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/negroni"
 	"net/http"
@@ -30,6 +31,11 @@ func init() {
 }
 
 func main() {
+	trelloMember, trelloBoards := trelloClient.LinkTrello("79f9002817946dcc922e9c6a629b1763f45d62dc029f340b7dffd6ab93545336")
+	log.Info(trelloMember)
+	for _, board := range trelloBoards {
+		log.Info(board.Lists)
+	}
 	router := NewRouter()
 	n := negroni.Classic()
 	n.UseHandler(router)
